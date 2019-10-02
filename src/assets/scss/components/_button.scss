@@ -1,0 +1,44 @@
+//
+// Button
+//------------------------------------------------------------------------
+
+.btn-add {
+  display: inline-block;
+  border: 1px solid $color-transparent;
+  padding: 18px 15px;
+  border-radius: 6px;
+  line-height: 1;
+  white-space: nowrap;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 16px;
+
+  // ---- colours
+  &-black {
+    color: $color-white;
+    background-color: $color-black;
+    border-color: $color-black;
+  }
+  // ---- sizes
+  // &-sm {
+  //   padding: .25rem .5rem;
+  //   font-size: .875rem;
+  //   line-height: 1.5;
+  //   border-radius: .2rem;
+  // }
+}
+
+@include mq(tablet) {
+  // .btn {
+  //   padding: 13px 15px;
+  //   border-radius: 4px;
+
+  // ---- sizes
+  // &-sm {
+  //   padding: .5rem 1rem;
+  //   font-size: 1.25rem;
+  //   line-height: 1.5;
+  //   border-radius: .3rem;
+  // }
+  // }
+}

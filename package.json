@@ -1,0 +1,37 @@
+{
+  "name": "webpack-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "custom-react-scripts": "0.2.2",
+    "js-cookie": "^2.2.0",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "reactstrap": "^7.1.0",
+    "redux": "^4.0.1",
+    "redux-form": "^8.1.0",
+    "redux-saga": "^1.0.2",
+    "sass-mq": "^5.0.0",
+    "string-format": "^2.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint:js": "eslint --ignore-path .eslintignore  --ignore-pattern \"!**/.*\" .",
+    "lint:style": "stylelint \"**/*.scss\"",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "stylelint-config-standard": "^18.2.0"
+  }
+}

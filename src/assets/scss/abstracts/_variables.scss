@@ -1,0 +1,51 @@
+//
+// variables
+//------------------------------------------------------------------------
+
+// ---- font-family
+$font-web: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+// ---- breakpoints
+// See https://github.com/sass-mq/sass-mq/ for original full version.
+$mq-breakpoints: (
+  mobile-small:  321px,
+  mobile:  375px,
+  mobile-wide:  415px,
+  tablet:  768px,
+  desktop: 1280px,
+);
+
+// ---- font-size
+$p: 14px;
+$p-sm: 13px;
+$p-small: 12px;
+$p-medium: 18px;
+$p-large: 24px;
+
+// ---- line-height
+$lh: 1.5;
+$lh-x-small: 1.1;
+$lh-small: 1.25;
+$lh-large: 1.75;
+
+// ---- font-weight
+$w-light: 300;
+$w-normal: 400;
+$w-semibold: 600;
+$w-bold: 700;
+$w-heavy: 800;
+
+// ---- base-url
+$base-url: '../images' !default;
+
+//------------------------------------| Color |------------------------------------
+// https://css-tricks.com/what-do-you-name-color-variables/#comment-1653710
+// http://chir.ag/projects/name-that-color
+
+$color-white-057: rgba(255, 255, 255, 0.57);
+$color-black-05: rgba(0, 0, 0, 0.5);
+
+$color-transparent: transparent;
+$color-white: #fff;
+$color-black: #000;
+$color-red: #ff0d00;
