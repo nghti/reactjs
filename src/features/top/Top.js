@@ -37,12 +37,11 @@ class Top extends React.Component {
 
   render() {
     const {placeDetail} = this.props
-
     return (
       <ListGroup>
-        {!_.isEmpty(placeDetail.certificates) && placeDetail.certificates.map((name, key) =>
+        {!_.isEmpty(placeDetail) && placeDetail.map((name, key) =>
           <ListGroupItem key={key}>
-            {name.certificate_name}
+            {name.name}
           </ListGroupItem>
         )}
       </ListGroup>
@@ -51,7 +50,7 @@ class Top extends React.Component {
 }
 
 Top.propTypes = {
-  placeDetail: PropTypes.object
+  placeDetail: PropTypes.array
 }
 
 const mapStateToProps = state => {

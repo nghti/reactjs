@@ -1,7 +1,7 @@
 import { types } from './actions'
 
 const initialState = {
-  placeDetail: {}
+  placeDetail: []
 }
 
 export default (state = initialState, action = {}) => {

@@ -10,6 +10,7 @@ module.exports = {
     "prettier/standard",
     'eslint:recommended',
   ],
+  "parser": "babel-eslint",
   plugins: [
     "flowtype",
     "react",
@@ -22,4 +23,9 @@ module.exports = {
     'no-console': 'warn',
     'semi': ["error", "never"]
   },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
+    }
+  }
 }

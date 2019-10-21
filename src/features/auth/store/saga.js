@@ -9,9 +9,9 @@ import { setToken, removeToken } from "../../../utils/helpers";
 function* login(action) {
   try {
     const {data} = yield call(authService.loginRequest, action.payload.user)
-    if(!_.isEmpty(data.data)) {
+    if(!_.isEmpty(data)) {
       removeToken()
-      setToken(data.data.token)
+      setToken(data.token)
       yield put(authActions.loginSuccess(data))
       yield put(push('/top'))
     }
