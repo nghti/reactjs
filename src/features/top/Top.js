@@ -1,4 +1,5 @@
 import React from "react";
+import { bindActionCreators } from 'redux'
 import { connect } from "react-redux";
 import PropTypes from 'prop-types'
 import _ from "lodash";
@@ -16,7 +17,6 @@ class Top extends React.Component {
       isOpen: false
     }
     this.handleClick = this.handleClick.bind(this)
-    this.toggle = this.toggle.bind(this)
   }
 
   componentDidMount() {
@@ -25,11 +25,6 @@ class Top extends React.Component {
   }
 
   handleClick() {
-    const {logoutRequest} = this.props
-    logoutRequest()
-  }
-
-  toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     })
@@ -44,6 +39,12 @@ class Top extends React.Component {
             {name.name}
           </ListGroupItem>
         )}
+        <div>
+          <h2 onClick={this.handleClick}>title</h2>
+          {this.state.isOpen &&
+            <p>noi dung cua content</p>
+          }
+        </div>
       </ListGroup>
     )
   }
@@ -59,7 +60,15 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  {fetchPlaceDetailRequest}
-)(Top)
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+         fetchPlaceDetailRequest: fetchPlaceDetailRequest
+         }, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Top);
+
+// export default connect(
+//   mapStateToProps,
+//   {fetchPlaceDetailRequest}
+// )(Top)
