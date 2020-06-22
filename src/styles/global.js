@@ -7,6 +7,10 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     margin: 0;
   }
+
+  .ant-dropdown .ant-dropdown-menu-item {
+    min-width: 160px;
+  }
 `;
 
 export default GlobalStyle;

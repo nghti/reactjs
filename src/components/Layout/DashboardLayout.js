@@ -16,9 +16,9 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import _ from 'lodash';
 
-import { ContainerDiv } from '@/pages/Dashboard/styled';
 import { logoutRequest } from '@/store/auth/actions';
 import * as Styled from '@/pages/Dashboard/styled';
+import * as Styled2 from '@/components/Layout/styled';
 
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
@@ -28,11 +28,27 @@ class DashboardLayout extends React.Component {
     super(props);
     this.state = {
       collapsed: false,
+      // activeTop: '',
+      activeLeft: '',
     };
     this.handleClick = this.handleClick.bind(this);
+    // this.scroll = this.scroll.bind(this);
   }
 
   toggle = () => {
+    let showWidth = '';
+    showWidth = document.getElementsByClassName('ant-sider')[0].clientWidth;
+
+    if (showWidth === 256) {
+      this.setState({
+        activeLeft: 'active-left',
+      });
+    } else {
+      this.setState({
+        activeLeft: '',
+      });
+    }
+
     this.setState({
       collapsed: !this.state.collapsed,
     });
@@ -43,15 +59,31 @@ class DashboardLayout extends React.Component {
     logoutRequest();
   }
 
+  // scroll() {
+  //   if (window.scrollY > 64) {
+  //     this.setState({
+  //       activeTop: 'active-top'
+  //     })
+  //   } else {
+  //     this.setState({
+  //       activeTop: '',
+  //     })
+  //   }
+  // }
+
+  // componentDidMount() {
+  //   window.addEventListener('scroll', this.scroll)
+  // }
+
   render() {
     const { location } = this.props;
     const menu = (
       <Menu>
         <Menu.Item key="0">
-          <a href="http://www.alipay.com/">About</a>
+          <Link to="form">Form</Link>
         </Menu.Item>
         <Menu.Item key="1">
-          <a href="http://www.taobao.com/">List</a>
+          <Link to="table">Table</Link>
         </Menu.Item>
         <Menu.Divider />
         <Menu.Item key="3" onClick={this.handleClick}>
@@ -71,9 +103,9 @@ class DashboardLayout extends React.Component {
     ];
 
     return (
-      <ContainerDiv>
-        <Layout className="layout-height">
-          <Sider width="256" trigger={null} collapsible collapsed={this.state.collapsed}>
+      <Styled.ContainerDiv>
+        <Layout>
+          <Sider className="ant-sider" width="256" trigger={null} collapsible collapsed={this.state.collapsed}>
             <div className="logo" />
             <Menu defaultSelectedKeys={[location.pathname]} mode="inline" theme="dark">
               <Menu.Item key="/" icon={<PieChartOutlined />}>
@@ -102,40 +134,36 @@ class DashboardLayout extends React.Component {
             </Menu>
           </Sider>
           <Layout className="site-layout">
-            <Header className="site-layout-background" style={{ padding: 0 }}>
+            <Header className={`site-layout-background ${this.state.activeLeft}`}>
               {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                 className: 'trigger',
                 onClick: this.toggle,
               })}
-              <div style={{ float: 'right', marginRight: '16px' }}>
+              <Styled2.AntDropdown>
                 <Dropdown overlay={menu} placement="bottomRight">
                   <span>
                     <Avatar icon={<UserOutlined />} />
                     <span style={{ marginLeft: '10px' }}>Admin</span>
                   </span>
                 </Dropdown>
-              </div>
+              </Styled2.AntDropdown>
             </Header>
-            {location.pathname !== '/' && (
-              <Styled.AntProHeader>
-                <PageHeader className="site-page-header" title="Form" breadcrumb={{ routes }}>
-                  <p>
-                    Form pages are used to collect or verify information to users, and basic forms are common in
-                    scenarios where there are fewer data items.
-                  </p>
-                </PageHeader>
-              </Styled.AntProHeader>
-            )}
-            <Content
-              style={{
-                margin: '24px 16px',
-                minHeight: 280,
-              }}>
-              {this.props.children}
-            </Content>
+            <div className="side-wrap">
+              {location.pathname !== '/' && (
+                <Styled.AntProHeader>
+                  <PageHeader className="site-page-header" title="Form" breadcrumb={{ routes }}>
+                    <p>
+                      Form pages are used to collect or verify information to users, and basic forms are common in
+                      scenarios where there are fewer data items.
+                    </p>
+                  </PageHeader>
+                </Styled.AntProHeader>
+              )}
+              <Content className="site-content">{this.props.children}</Content>
+            </div>
           </Layout>
         </Layout>
-      </ContainerDiv>
+      </Styled.ContainerDiv>
     );
   }
 }
