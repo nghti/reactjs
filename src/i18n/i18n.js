@@ -1,18 +1,19 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+import en from '@/i18n/lang/en';
 
 // the translations
 // (tip move them in a JSON file and import them)
 const resources = {
   en: {
-    translation: {
-      sorry_page_you_visited_does_not_exist: 'Sorry, the page you visited does not exist.',
-      sorry_the_server_is_wrong: 'Sorry, the server is wrong',
-    },
+    translation: en,
   },
 };
 
 i18n
+  .use(LanguageDetector)
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,

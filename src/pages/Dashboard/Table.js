@@ -6,7 +6,6 @@ import * as Styled from '@/pages/Dashboard/styled';
 import { userRequest } from '@/store/dashboard/actions';
 
 const EditableContext = React.createContext();
-
 const EditableRow = ({ index, ...props }) => {
   const [form] = Form.useForm();
   return (
@@ -17,7 +16,6 @@ const EditableRow = ({ index, ...props }) => {
     </Form>
   );
 };
-
 const EditableCell = ({ title, editable, children, dataIndex, record, handleSave, ...restProps }) => {
   const [editing, setEditing] = useState(false);
   const inputRef = useRef();
