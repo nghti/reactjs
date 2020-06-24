@@ -6,7 +6,6 @@ import * as dashboardService from '@/api/dashboard';
 
 function* user(action) {
   try {
-    console.log('action', action);
     const { data } = yield call(dashboardService.userRequest, action.payload.user);
     yield put(dashboardActions.userSuccess(data));
   } catch (e) {
