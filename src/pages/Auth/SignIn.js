@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { ContainerForm } from '@/pages/Auth/styled';
-import { loginRequest } from '@/store/auth/actions';
+import { loginRequest } from '@/store/modules/auth/actions';
 
 class SignIn extends React.Component {
   constructor(props) {

@@ -1,4 +1,4 @@
-import { types } from '@/store/dashboard/actions';
+import * as types from '@/store/modules/dashboard/constants';
 
 const initialState = {
   listUser: {},

@@ -3,13 +3,14 @@ import { push } from 'react-router-redux';
 import _ from 'lodash';
 import { toast } from 'react-toastify';
 
-import * as authActions from '@/store/auth/actions';
+import * as types from '@/store/modules/auth/constants';
+import * as authActions from '@/store/modules/auth/actions';
 import * as authService from '@/api/auth';
 import { setToken, removeToken } from '@/utils/helpers';
 
 function* login(action) {
   try {
-    const { data } = yield call(authService.loginRequest, action.payload.user);
+    const { data } = yield call(authService.loginRequest, action.payload);
     if (!_.isEmpty(data)) {
       removeToken();
       setToken(data.token);
@@ -37,8 +38,8 @@ function* logout() {
 }
 
 function* watchAuthRequest() {
-  yield takeEvery(authActions.types.AUTH_LOGIN_REQUEST, login);
-  yield takeEvery(authActions.types.AUTH_LOGOUT_REQUEST, logout);
+  yield takeEvery(types.AUTH_LOGIN_REQUEST, login);
+  yield takeEvery(types.AUTH_LOGOUT_REQUEST, logout);
 }
 
 export const authSaga = [fork(watchAuthRequest)];

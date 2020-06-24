@@ -3,7 +3,7 @@ import { Table, Input, Button, Popconfirm, Form } from 'antd';
 import { connect } from 'react-redux';
 
 import * as Styled from '@/pages/Dashboard/styled';
-import { userRequest } from '@/store/dashboard/actions';
+import { userRequest } from '@/store/modules/dashboard/actions';
 
 const EditableContext = React.createContext();
 const EditableRow = ({ index, ...props }) => {

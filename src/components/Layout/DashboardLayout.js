@@ -5,7 +5,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
-import { logoutRequest } from '@/store/auth/actions';
+import { logoutRequest } from '@/store/modules/auth/actions';
 import * as Styled from '@/pages/Dashboard/styled';
 import TopHeader from '@/components/Layout/Partials/TopHeader';
 import LeftSider from '@/components/Layout/Partials/LeftSider';
