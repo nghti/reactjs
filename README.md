@@ -1,6 +1,6 @@
 ## Project setup
 
-`yarn start`
+`yarn install`
 
 ## Compiles and hot-reloads for development
 
