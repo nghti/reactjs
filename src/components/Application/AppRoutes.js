@@ -3,7 +3,7 @@ import { Switch, Route, withRouter } from 'react-router';
 import { map } from 'lodash';
 
 import { hasToken } from '@/utils/helpers';
-import DashboardLayout from '@/components/Layout/DashboardLayout';
+import DashboardLayout from '@/layouts/DashboardLayout';
 
 class AppRouter extends PureComponent {
   renderRoute(route) {

@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 import { logoutRequest } from '@/store/modules/auth/actions';
-import * as Styled from '@/components/Layout/styled';
-import { TopHeader, LeftSider, BreadCrumb } from '@/components/Layout/Partials';
+import * as Styled from '@/layouts/styled';
+import { TopHeader, LeftSider, BreadCrumb } from '@/layouts/Partials';
 
 const { Content } = Layout;
 

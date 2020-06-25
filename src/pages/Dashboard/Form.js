@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Input, Button, Select, Cascader, DatePicker, InputNumber, TreeSelect, Switch } from 'antd';
 
-import ContainerWrap from '@/styles/styledContainer';
+import ContainerWrap from '@/assets/styledContainer';
 
 const formItemLayout = {
   labelCol: { span: 4 },

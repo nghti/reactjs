@@ -15,8 +15,8 @@ import route from '@/routes';
 import * as serviceWorker from '@/serviceWorker';
 import history from '@/utils/history';
 import { store } from '@/store/configure';
-import GlobalStyle from '@/styles/global';
-import theme from '@/styles/theme';
+import GlobalStyle from '@/assets/global';
+import theme from '@/assets/theme';
 import i18n from '@/i18n/i18n';
 
 ReactDOM.render(

@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect, useRef } from 'react';
 import { Table, Input, Button, Popconfirm, Form } from 'antd';
 import { connect } from 'react-redux';
 
-import ContainerWrap from '@/styles/styledContainer';
+import ContainerWrap from '@/assets/styledContainer';
 import { userRequest } from '@/store/modules/dashboard/actions';
 
 const EditableContext = React.createContext();

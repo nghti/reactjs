@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Carousel } from 'antd';
 
 import * as Styled from '@/pages/Dashboard/styled';
-import ContainerWrap from '@/styles/styledContainer';
+import ContainerWrap from '@/assets/styledContainer';
 
 function Dashboard() {
   const [toggleClass, setToggle] = useState(true);

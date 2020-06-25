@@ -3,7 +3,7 @@ import { Dropdown, Layout, Menu, Avatar } from 'antd';
 import { MenuUnfoldOutlined, MenuFoldOutlined, UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
-import * as Styled from '@/components/Layout/styled';
+import * as Styled from '@/layouts/styled';
 
 const { Header } = Layout;
 

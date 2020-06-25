@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import styledSystem from '@/styles/styledSystem';
+import styledSystem from '@/assets/styledSystem';
 import { red } from '@ant-design/colors';
 
 export const AntProSlider = styled.div`
