@@ -4,7 +4,7 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { ContainerForm } from '@/pages/Auth/styled';
+import * as Styled from '@/pages/Auth/styled';
 import { loginRequest } from '@/store/modules/auth/actions';
 
 class SignIn extends React.Component {
@@ -20,7 +20,7 @@ class SignIn extends React.Component {
 
   render() {
     return (
-      <ContainerForm>
+      <Styled.ContainerForm>
         <Form
           name="normal_login"
           className="login-form"
@@ -60,7 +60,7 @@ class SignIn extends React.Component {
             </Button>
           </Form.Item>
         </Form>
-      </ContainerForm>
+      </Styled.ContainerForm>
     );
   }
 }

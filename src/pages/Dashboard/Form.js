@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Input, Button, Select, Cascader, DatePicker, InputNumber, TreeSelect, Switch } from 'antd';
 
-import * as Styled from '@/pages/Dashboard/styled';
+import ContainerWrap from '@/styles/styledContainer';
 
 const formItemLayout = {
   labelCol: { span: 4 },
@@ -16,7 +16,7 @@ const buttonItemLayout = {
 
 function PageForm() {
   return (
-    <Styled.AntProContent p={4}>
+    <ContainerWrap>
       <Form
         {...formItemLayout}
         layout="horizontal"
@@ -74,10 +74,10 @@ function PageForm() {
           <Switch />
         </Form.Item>
         <Form.Item {...buttonItemLayout}>
-          <Button type="primary">Submit</Button>
+          <Button type="dashed">Submit</Button>
         </Form.Item>
       </Form>
-    </Styled.AntProContent>
+    </ContainerWrap>
   );
 }
 

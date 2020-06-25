@@ -19,11 +19,3 @@ export const Flex = styled('div')(
 );
 
 export const Box = styled.div(space, color, layout, typography);
-
-export const SpinWrapper = styled.div`
-  position: absolute;
-  zindex: 99;
-  bottom: 50;
-  left: 50%;
-  transform: translateX(-50%);
-`;

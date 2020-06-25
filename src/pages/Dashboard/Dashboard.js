@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Carousel } from 'antd';
 
 import * as Styled from '@/pages/Dashboard/styled';
+import ContainerWrap from '@/styles/styledContainer';
 
 function Dashboard() {
   const [toggleClass, setToggle] = useState(true);
   return (
-    <Styled.AntProContent p={4}>
+    <ContainerWrap>
       <Styled.AntProSlider>
+        <Styled.AntTitle fontSize={[2, 3, 4]}>Slider</Styled.AntTitle>
         <Carousel autoplay>
           <div>
             <img alt="title" src="https://picsum.photos/1280/160" />
@@ -109,7 +111,7 @@ function Dashboard() {
           </p>
         </div>
       )}
-    </Styled.AntProContent>
+    </ContainerWrap>
   );
 }
 

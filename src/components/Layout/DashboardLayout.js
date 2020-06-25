@@ -1,15 +1,12 @@
 import React from 'react';
 import { Layout } from 'antd';
-
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 import { logoutRequest } from '@/store/modules/auth/actions';
-import * as Styled from '@/pages/Dashboard/styled';
-import TopHeader from '@/components/Layout/Partials/TopHeader';
-import LeftSider from '@/components/Layout/Partials/LeftSider';
-import BreadCrumb from '@/components/Layout/Partials/BreadCrumb';
+import * as Styled from '@/components/Layout/styled';
+import { TopHeader, LeftSider, BreadCrumb } from '@/components/Layout/Partials';
 
 const { Content } = Layout;
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { PageHeader } from 'antd';
 import _ from 'lodash';
 
-import * as Styled from '@/pages/Dashboard/styled';
+import * as Styled from '@/components/Layout/styled';
 
 export class BreadCrumb extends Component {
   render() {

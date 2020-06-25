@@ -3,7 +3,7 @@ import { Dropdown, Layout, Menu, Avatar } from 'antd';
 import { MenuUnfoldOutlined, MenuFoldOutlined, UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
-import * as Styled2 from '@/components/Layout/styled';
+import * as Styled from '@/components/Layout/styled';
 
 const { Header } = Layout;
 
@@ -30,14 +30,14 @@ export class TopHeader extends Component {
           className: 'trigger',
           onClick: this.props.toggle,
         })}
-        <Styled2.AntDropdown>
+        <Styled.AntDropdown>
           <Dropdown overlay={menu} placement="bottomRight">
             <span>
               <Avatar icon={<UserOutlined />} />
               <span style={{ marginLeft: '10px' }}>Admin</span>
             </span>
           </Dropdown>
-        </Styled2.AntDropdown>
+        </Styled.AntDropdown>
       </Header>
     );
   }

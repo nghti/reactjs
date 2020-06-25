@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect, useRef } from 'react';
 import { Table, Input, Button, Popconfirm, Form } from 'antd';
 import { connect } from 'react-redux';
 
-import * as Styled from '@/pages/Dashboard/styled';
+import ContainerWrap from '@/styles/styledContainer';
 import { userRequest } from '@/store/modules/dashboard/actions';
 
 const EditableContext = React.createContext();
@@ -74,7 +74,6 @@ const EditableCell = ({ title, editable, children, dataIndex, record, handleSave
 
   return <td {...restProps}>{childNode}</td>;
 };
-
 class PageTable extends React.Component {
   constructor(props) {
     super(props);
@@ -167,8 +166,9 @@ class PageTable extends React.Component {
       };
     });
     const { listUser } = this.props;
+
     return (
-      <Styled.AntProContent p={4}>
+      <ContainerWrap>
         <Button
           onClick={this.handleAdd}
           type="primary"
@@ -185,7 +185,7 @@ class PageTable extends React.Component {
           rowKey="id"
           columns={columns}
         />
-      </Styled.AntProContent>
+      </ContainerWrap>
     );
   }
 }
