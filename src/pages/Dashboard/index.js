@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 import * as Styled from '@/pages/Dashboard/styled';
 import ContainerWrap from '@/assets/styledContainer';
-import Slide from '@/components/Slide/Slide';
-// import Game from '@/components/Slide/Game'
-// import Todo from '@/components/Slide/Todo'
+import Slide from '@/pages/Dashboard/Slide';
+// import Game from '@/pages/Dashboard/Game'
+// import Todo from '@/pages/Dashboard/Todo'
 
 export default function Dashboard() {
   const [toggleClass, setToggle] = useState(true);

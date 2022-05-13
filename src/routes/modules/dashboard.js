@@ -3,15 +3,15 @@ import React from 'react';
 import loadable from '@/utils/loadable';
 import LoadingPage from '@/components/LoadingPage/LoadingPage';
 
-const PageDashboard = loadable(() => import('@/pages/Dashboard/Dashboard'), {
+const PageDashboard = loadable(() => import('@/pages/Dashboard/index'), {
   fallback: <LoadingPage />,
 });
 
-const PageForm = loadable(() => import('@/pages/Dashboard/Form'), {
+const PageForm = loadable(() => import('@/pages/Form/index'), {
   fallback: <LoadingPage />,
 });
 
-const PageTable = loadable(() => import('@/pages/Dashboard/Table'), {
+const PageTable = loadable(() => import('@/pages/Table/index'), {
   fallback: <LoadingPage />,
 });
 
