@@ -9,7 +9,7 @@ const { Header } = Layout;
 
 export class TopHeader extends Component {
   render() {
-    const { collapsed, activeLeft, logOut } = this.props;
+    const { collapsed, activeLeft, logOut, toggle } = this.props;
     const menu = (
       <Menu>
         <Menu.Item key="0">
@@ -26,10 +26,13 @@ export class TopHeader extends Component {
     );
     return (
       <Header className={`site-layout-background ${activeLeft}`}>
-        {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+        {/* {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
           className: 'trigger',
           onClick: this.props.toggle,
-        })}
+        })} */}
+        <span className="trigger" onClick={toggle}>
+          {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+        </span>
         <Styled.AntDropdown>
           <Dropdown overlay={menu} placement="bottomRight">
             <span>

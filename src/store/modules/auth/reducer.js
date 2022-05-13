@@ -2,7 +2,7 @@ import * as types from '@/store/modules/auth/constants';
 import { hasToken } from '@/utils/helpers';
 
 let isAuthenticated = hasToken();
-
+console.log('isAuthenticated', isAuthenticated);
 const initialState = {
   isAuthenticated: isAuthenticated,
 };

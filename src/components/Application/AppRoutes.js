@@ -8,7 +8,6 @@ import DashboardLayout from '@/layouts/DashboardLayout';
 class AppRouter extends PureComponent {
   renderRoute(route) {
     const RouteComponent = route.component;
-
     if (route.layout) {
       return (
         <DashboardLayout>

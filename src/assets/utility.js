@@ -7,9 +7,9 @@ export const Flex = styled('div')(
       properties: ['display'],
       defaultScale: ['flex', 'inline-flex', 'block', 'inline-block'],
     },
-    alignItems: {
-      properties: ['align-items'],
-      defaultScale: ['flex-start', 'flex-end', 'center', 'stretch'],
+    float: {
+      properties: ['float'],
+      defaultScale: ['left', 'right', 'center'],
     },
     justifyContent: {
       properties: ['justify-content'],

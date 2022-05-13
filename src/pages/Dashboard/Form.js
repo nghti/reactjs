@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Input, Button, Select, Cascader, DatePicker, InputNumber, TreeSelect, Switch } from 'antd';
 
 import ContainerWrap from '@/assets/styledContainer';
@@ -15,8 +15,19 @@ const buttonItemLayout = {
 };
 
 function PageForm() {
+  const [Count, setCount] = useState(0);
+  useEffect(() => {
+    document.title = `Page ${Count}`;
+  });
   return (
     <ContainerWrap>
+      <h4
+        onClick={() => {
+          setCount(Count + 1);
+        }}>
+        Button
+      </h4>
+      <p>So dem la {Count}</p>
       <Form
         {...formItemLayout}
         layout="horizontal"
