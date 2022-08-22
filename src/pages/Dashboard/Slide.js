@@ -1,31 +1,35 @@
 import React from 'react';
 import { Carousel } from 'antd';
 
-export default function Slide(props) {
-  const num = 4;
+const data = [
+  {
+    id: 1,
+    link: 'http://placekitten.com/1280/160',
+  },
+  {
+    id: 2,
+    link: 'http://placekitten.com/1280/160',
+  },
+  {
+    id: 3,
+    link: 'http://placekitten.com/1280/160',
+  },
+  {
+    id: 4,
+    link: 'http://placekitten.com/1280/160',
+  },
+];
+
+export default function Slide() {
   return (
     <div>
-      <span
-        onClick={(e) => {
-          props.handlePick(e, num);
-        }}>
-        Click to father
-      </span>
-      <Carousel autoplay className={props.color}>
-        <div>
-          <img alt="title" src={props.link} />
-        </div>
-        <div>
-          <img alt="title" src={props.link} />
-        </div>
-        <div>
-          <img alt="title" src={props.link} />
-        </div>
-        <div>
-          <img alt="title" src={props.link} />
-        </div>
+      <Carousel autoplay>
+        {data.map((item, i) => (
+          <div key={i}>
+            <img alt="title" src={item.link} />
+          </div>
+        ))}
       </Carousel>
-      {props.children}
     </div>
   );
 }
